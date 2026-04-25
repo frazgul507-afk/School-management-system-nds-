@@ -5,11 +5,11 @@ function saveData() {
 }
 
 function addStudent() {
-  let name = document.querySelector("input[placeholder='Student Name']").value;
-  let cls = document.querySelector("input[placeholder='Class']").value;
-  let fee = document.querySelector("input[placeholder='Monthly Fee']").value;
+  let name = document.getElementById("name").value;
+  let cls = document.getElementById("cls").value;
+  let fee = document.getElementById("fee").value;
 
-  if(name === "" || cls === "" || fee === "") {
+  if (!name || !cls || !fee) {
     alert("Please fill all fields");
     return;
   }
@@ -22,6 +22,6 @@ function addStudent() {
   });
 
   saveData();
-  alert("Student Added Successfully ✔");
+  alert("Student Added ✔");
   location.reload();
 }
